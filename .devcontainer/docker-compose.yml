@@ -12,6 +12,6 @@ services:
             PYTHONPATH: /workspace
         volumes:
             - type: bind
-              source: ./workspace
+              source: ../workspace
               target: /workspace
         #command: でコマンドを実行させられる
