@@ -1,0 +1,25 @@
+{
+"name": "VScode Python 開発コンテナ",
+"dockerComposeFile": "docker-compose.yml",
+"service": "workspace",
+"workspaceFolder": "/workspace",
+"remoteUser": "vscode",
+
+"customizations": {
+    "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "MS-CEINTL.vscode-language-pack-ja",
+        "ms-azuretools.vscode-docker",
+        "oderwat.indent-rainbow"
+    ]
+},
+
+"appPort": [ 9000 ],
+
+"postCreateCommand": "sudo pip install -r requirements.txt",
+
+
+
+
+}

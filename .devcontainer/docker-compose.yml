@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+    workspace:
+        build: .
+        restart: unless-stopped
+        working_dir: '/workspace'
+        tty: true #コンテナを開きっぱなしにする
+        environment:
+            PYTHONPATH: /workspace
+        volumes:
+            - type: bind
+            source: ../workspace
+            target: /workspace
+        #command: でコマンドを実行させられる
