@@ -15,11 +15,6 @@
     ]
 },
 
-"appPort": [ 9000 ],
-
-"postCreateCommand": "sudo pip install -r requirements.txt",
-
-
-
+"appPort": [ 9000 ]
 
 }
