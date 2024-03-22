@@ -6,8 +6,6 @@ ARG USERNAME=vscode
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
-WORKDIR /workspace
-
 RUN apt-get update \
     && apt-get -y install --no-install-recommends apt-utils dialog 2>&1 \
     && apt-get -y install git iproute2 procps lsb-release \
@@ -22,6 +20,8 @@ RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
 RUN pip install flake8 autopep8
 
+WORKDIR /workspace
+COPY .devcontainer/requirements.txt .
 RUN pip install -r requirements.txt
 
 # 本番環境ではCMD ["python", "main.py"] とする
