@@ -21,7 +21,8 @@ RUN pip install --upgrade setuptools
 RUN pip install flake8 autopep8
 
 WORKDIR /workspace
-RUN pip install -r .devcontainer/requirements.txt
+COPY .devcontainer/requirements.txt ./
+RUN pip install -r requirements.txt
 
 # 本番環境ではCMD ["python", "main.py"] とする
 CMD ["python"]
