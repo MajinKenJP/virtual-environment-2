@@ -1,20 +1,14 @@
 ipykernel
 jupyter
 
+
 pandas
 numpy
 matplotlib
 seaborn
 
-aiohttp
-requests
-websockets
-websocket-client
-python-socketio
-python-dotenv
-
-mplfinance
-finta
-pybitflyer
-
 tqdm
+
+scanpy
+leidenalg
+anndata
